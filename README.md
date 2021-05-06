@@ -1,1 +1,5 @@
-# Project_1
+# Project_1 
+collaborators: Jocelyn
+Liz
+Steven
+Summer
