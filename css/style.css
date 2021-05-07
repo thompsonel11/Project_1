@@ -20,9 +20,13 @@
 .brand-logo {
     font-family: 'Abril Fatface';
     text-transform: uppercase;
-
 }
  
+.motto {
+    /* text-transform: uppercase; */
+    font-size: 1.5rem;
+}
+
  p {
    line-height: 2rem;
  }
