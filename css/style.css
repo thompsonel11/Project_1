@@ -23,6 +23,16 @@
     font-size: 1.5rem;
 }
 
+.liquor {
+  max-height: 200px;
+  width: auto;
+  margin: 20px;
+}
+
+.card-title {
+  font-family: 'Abril Fatface';
+}
+
  p {
    line-height: 2rem;
  }
