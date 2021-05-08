@@ -11,7 +11,7 @@ for (let i = 0; i < mood.length; i++) {
         "method": "GET",
     }
 
-    var randomGifNumber = 5 // math.random on 50 results
+    var randomGifNumber = Math.floor(Math.random() * 50);
     
     $.ajax(settings).done(function (response) {
         console.log(response);
@@ -19,10 +19,6 @@ for (let i = 0; i < mood.length; i++) {
         console.log('mood img ', moodImg)
         moodImg.attr('src', response.data[randomGifNumber].images.original.url)
     });
-
-
-    
-    
 }
 // API FOR LIQUOR TYPE
 var liquorType = ['vodka', 'gin', 'whiskey', 'liqueur', 'rum', 'tequila', 'brandy', 'jagermeister']
