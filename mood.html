@@ -20,118 +20,83 @@
     <div class="nav-wrapper container">
       <a id="logo-container" href="./index.html" class="brand-logo">Pour Decisions</a>
       <ul class="right hide-on-med-and-down">
-        <li class="active"><a href="./mood.html">Drink My Feelings</a></li>
-        <li><a href="./liquor.html">I'll Pick My Liquor</a></li>
+        <li><a href="./mood.html">Drink My Feelings</a></li>
+        <li class="active"><a href="./liquor.html">Favorite Liquor</a></li>
         <li><a href="./random.html">Decision Fatigue</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Navbar Link</a></li>
+        <li><a href="./mood.html">Drink My Feelings</a></li>
+        <li class="active"><a href="./liquor.html">Favorite Liquor</a></li>
+        <li><a href="./random.html">Decision Fatigue</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
 
-  <div class="container choices">
-    <!-- choices is where we will hide to present results  -->
-    <h3 class="header center-align black-text">Select the GIF that best represents your feelings</h3>
 
-    <div class="row">
-<!-- BEGIN CREATING CARDS FOR EACH MOOD -->
-      <div class="col s3">
-        <div class="card small">
-          <div class="image center ">
-            <img class="moodGIF" id = "sad" src="">
-            <br>
-          </div>
-        </div>
+  <!-- choices is where we will hide to present results  -->
+  <h3 class="header center-align black-text">How are you feeling?</h3>
+
+  <!-- BEGIN CREATING CARDS FOR EACH MOOD -->
+    <div class="row center-align">
+
+      <div class="col l3 m6 s12 image">
+        <img class="moodGIF" id="sad" src="">
       </div>
 
-      <div class="col s3">
-        <div class="card small">
-          <div class="image center">
-            <img class="moodGIF" id = "happy" src="">
-            <br>
-          </div>
-        </div>
+      <div class="col l3 m6 s12 image">
+        <img class="moodGIF" id="happy" src="">
       </div>
 
-      <div class="col s3">
-        <div class="card small">
-          <div class="image center">
-            <img class="moodGIF" id = "relaxed" src="">
-            <br>
-          </div>
-        </div>
+      <div class="col l3 m6 s12 image">
+        <img class="moodGIF" id="relaxed" src="">
       </div>
 
-      <div class="col s3">
-        <div class="card small">
-          <div class="image center">
-            <img class="moodGIF" id = "reckless" src="">
-            <br>
-          </div>
-        </div>
-      </div>
-
-      <div class="col s3">
-        <div class="card small">
-          <div class="image center">
-            <img class="moodGIF" id = "flirty" src="">
-            <br>
-          </div>
-        </div>
-      </div>
-
-      <div class="col s3">
-        <div class="card small">
-          <div class="image center">
-            <img class="moodGIF" id = "angry" src="">
-            <br>
-          </div>
-        </div>
-      </div>
-
-      <div class="col s3">
-        <div class="card small">
-          <div class="image center">
-            <img class="moodGIF" id = "lonely" src="">
-            <br>
-          </div>
-        </div>
-      </div>
-
-      <div class="col s3">
-        <div class="card small">
-          <div class="image center">
-            <img class="moodGIF" id = "celebrate" src="">
-            <br>
-          </div>
-        </div>
+      <div class="col l3 m6 s12 image">
+        <img class="moodGIF" id="reckless" src="">
       </div>
 
     </div>
-  </div>
 
+    <div class="row center-align">
+
+      <div class="col l3 m6 s12 image">
+        <img class="moodGIF" id="flirty" src="">
+      </div>
+
+      <div class="col l3 m6 s12 image">
+        <img class="moodGIF" id="angry" src="">
+      </div>
+
+      <div class="col l3 m6 s12 image">
+        <img class="moodGIF" id="lonely" src="">
+      </div>
+
+      <div class="col l3 m6 s12 image">
+        <img class="moodGIF" id="celebrate" src="">
+      </div>
+
+    </div>
   <!-- RESULTS FROM API SEARCH -->
   <div class="containerResults hide">
 
 
   </div>
 
-<!-- navbar at top with links to home, mood, liquor, random 
+  <!-- navbar at top with links to home, mood, liquor, random 
     cantainer of gifs generated from an API 
     gifs are links to drinks based on kind of liquor/ingredient
     when they click on a gif, the multi-gif container hides and the drink-container 
     appears with the drink and ingredients and buttons to:
     get a different suggestion with the same mood, choose a new mood
 -->
-<!--  Scripts-->
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="js/materialize.js"></script>
-<script src="js/init.js"></script>
-<script src="./js/script.js"></script>
-<script src="./js/moodScript.js"></script>
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="./js/script.js"></script>
+  <script src="./js/moodScript.js"></script>
 </body>
 
 </html>
