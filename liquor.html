@@ -35,7 +35,7 @@
     </div>
   </nav>
 
-  <div class="container choices">
+  <div class="container" id="choices">
     <h3 class="header center-align black-text">Find a recipe with your favorite liquor</h3>
 
     <div class="row">
@@ -140,28 +140,22 @@
     </div>
   </div>
 
-  <div class="container results hide">
+  <div class="container hide" id="results">
   <div class="row">
-    <img class="resultImg col m6 s12" id='drinkImage' src="" alt="cocktail">
-    <div class="recipe">
+    <img class="resultImg col m4 s12" id='drinkImage' src="" alt="cocktail">
+    <div class="col m1 s12"></div>
+    <div class="recipe col m7 s12">
       <h2 class="center" id="drinkName"> Drink Name</h2>
-      <ol>
+      <ul class="left" id="ingredients">
         <li> ingredient</li>
-        <li> ingredient</li>
-      </ol>
+      </ul>
+      <a class="waves-effect waves-light btn-large right" id="tryAgain" href="">Try Again</a>
     </div>
   </div>
 
   </div>
 
 
-  <!-- 
-        images of different liquor types
-    when they click on a gif, the liquorcontainer hides and the drink-container 
-    appears with the drink and ingredients and buttons to:
-    get a different suggestion with the same liquor type, choose a new liquor type
-
-     -->
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
