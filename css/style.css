@@ -86,3 +86,20 @@
  .btn-large {
    min-width: 210px;
  }
+
+
+ .resultImg {
+   max-width: 300px;
+   max-height: auto;
+   border: 5px solid black;
+   border-radius: 10px;
+   background-color: black;
+ }
+
+ .results {
+   margin-top: 50px;
+ }
+
+ .recipe {
+   margin: 30px;
+ }

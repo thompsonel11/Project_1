@@ -21,7 +21,7 @@ for (let i = 0; i < mood.length; i++) {
     });
 }
 // API FOR LIQUOR TYPE
-var liquorType = ['vodka', 'gin', 'whiskey', 'liqueur', 'rum', 'tequila', 'brandy', 'jagermeister']
+var liquorType = ['vodka', 'whiskey', 'tequila', 'gin', 'liqueur', 'jagermeister', 'prosecco', 'rum']
 var settings = {
     "async": true,
     "crossDomain": true,

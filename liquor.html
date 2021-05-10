@@ -44,7 +44,7 @@
         <div class="card small">
           <div class="image center">
             <a href="#">
-              <img class="liquor" src="./images/all in one-01.png">
+              <img class="liquor" id="vodka" src="./images/all in one-01.png">
               <br>
             </a>
             <span class="card-title">Vodka</span>
@@ -56,7 +56,7 @@
         <div class="card small">
           <div class="image center">
             <a href="#">
-              <img class="liquor" src="./images/all in one-06.png">
+              <img class="liquor" id="whiskey" src="./images/all in one-06.png">
               <br>
             </a>
             <span class="card-title">Whiskey</span>
@@ -68,7 +68,7 @@
         <div class="card small">
           <div class="image center">
             <a href="#">
-              <img class="liquor" src="./images/all in one-24.png">
+              <img class="liquor" id="tequila" src="./images/all in one-24.png">
               <br>
             </a>
             <span class="card-title">Tequila</span>
@@ -80,7 +80,7 @@
         <div class="card small">
           <div class="image center">
             <a href="#">
-              <img class="liquor" src="./images/all in one-03.png">
+              <img class="liquor" id="gin" src="./images/all in one-03.png">
               <br>
             </a>
             <span class="card-title">Gin</span>
@@ -92,7 +92,7 @@
         <div class="card small">
           <div class="image center">
             <a href="#">
-              <img class="liquor" src="./images/all in one-16.png">
+              <img class="liquor" id="liqueur" src="./images/all in one-16.png">
               <br>
             </a>
             <span class="card-title">Liqueur</span>
@@ -104,7 +104,7 @@
         <div class="card small">
           <div class="image center">
             <a href="#">
-              <img class="liquor" src="./images/all in one-12.png">
+              <img class="liquor" id="jagermeister" src="./images/all in one-12.png">
               <br>
             </a>
             <span class="card-title">Jägermeister</span>
@@ -117,7 +117,7 @@
         <div class="card small">
           <div class="image center">
             <a href="#">
-              <img class="liquor" src="./images/all in one-08.png">
+              <img class="liquor" id="prosecco" src="./images/all in one-08.png">
               <br>
             </a>
             <span class="card-title">Prosecco</span>
@@ -129,7 +129,7 @@
         <div class="card small">
           <div class="image center">
             <a href="#">
-              <img class="liquor" src="./images/all in one-07.png">
+              <img class="liquor" id="rum" src="./images/all in one-07.png">
               <br>
             </a>
             <span class="card-title">Rum</span>
@@ -140,7 +140,19 @@
     </div>
   </div>
 
-  <div class="container results"></div>
+  <div class="container results hide">
+  <div class="row">
+    <img class="resultImg col m6 s12" id='drinkImage' src="" alt="cocktail">
+    <div class="recipe">
+      <h2 class="center" id="drinkName"> Drink Name</h2>
+      <ol>
+        <li> ingredient</li>
+        <li> ingredient</li>
+      </ol>
+    </div>
+  </div>
+
+  </div>
 
 
   <!-- 
@@ -155,6 +167,7 @@
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <script src="./js/script.js"></script>
+  <script src="./js/liquorScript.js"></script>
 
 </body>
 
