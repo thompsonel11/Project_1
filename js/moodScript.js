@@ -3,7 +3,7 @@ var mood = ['sad', 'happy', 'relaxed', 'reckless', 'flirty', 'angry', 'lonely', 
 
 for (let i = 0; i < mood.length; i++) {
 
-    
+
     var settings = {
         "async": true,
         "crossDomain": true,
@@ -12,7 +12,7 @@ for (let i = 0; i < mood.length; i++) {
     }
 
     var randomGifNumber = Math.floor(Math.random() * 50);
-    
+
     $.ajax(settings).done(function (response) {
         console.log(response);
         var moodImg = $(`#${mood[i]}`)
@@ -27,10 +27,11 @@ var settings = {
     "crossDomain": true,
     "url": `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${liquorType}`,
     "method": "GET",
-  }
+}
 
-  $.ajax(settings).done(function (response) {
+$.ajax(settings).done(function (response) {
     console.log(response);
-  });
+});
 
 
+ß
