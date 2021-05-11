@@ -3,7 +3,7 @@
    color: white;
  }
 
- h1, h2, h3, h4, h5, h6 {
+ h1, h2, h3, h4 {
      font-family: 'Abril Fatface';
  }
 
@@ -12,6 +12,11 @@
     font-weight: 500;
     font-size: 7rem;
     text-shadow: 1px 2px 2px black;
+}
+
+h5, h6 {
+  line-height: 2;
+  font-weight: 500;
 }
 
 .brand-logo {
@@ -31,7 +36,7 @@
 }
 
  p {
-   line-height: 2rem;
+   line-height: 1.75rem;
  }
  
  .sidenav-trigger {
@@ -85,4 +90,14 @@
 
  .btn-large {
    min-width: 210px;
+ }
+
+
+ .resultImg {
+   max-width: 300px;
+   max-height: auto;
+   border: 5px solid black;
+   border-radius: 10px;
+   background-color: black;
+   margin-top: 100px;
  }
