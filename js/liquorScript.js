@@ -46,36 +46,20 @@ function APICall() {
             console.log(response);
             var drinkName = response.drinks[0].strDrink
             var drinkImage = response.drinks[0].strDrinkThumb
+            var instructions = response.drinks[0].strInstructions
             $('#drinkName').text(drinkName);
             $('#drinkImage').attr('src', drinkImage);
             console.log(response.drinks[0])
-            for ( var i = 1; i < 15; i++) {
-                // console.log(response.drinks[0]['strIngredient'+i])
-               if (response.drinks[0]['strIngredient'+i] === null){
-                   break;
-               }
-               console.log(response.drinks[0]['strIngredient'+i])
-                 // $('#ingredients').html('<h6><li>' + response.drinks[0].strMeasure(i) + response.drinks[0].strIngredient(i) + '</li>' )
-                
+            for (var i = 1; i < 15; i++) {
+                if (response.drinks[0]['strIngredient' + i] === null) {
+                    break;
+                }
+                console.log(response.drinks[0]['strIngredient' + i])
+                $('#ingredients').append('<li>' + response.drinks[0]['strMeasure' + i] + response.drinks[0]['strIngredient' + i] + '</li>')
             }
-
-           /*
-                '<li>' + response.drinks[0].strMeasure2 + response.drinks[0].strIngredient2 + '</li>' +
-                '<li>' + response.drinks[0].strMeasure3 + response.drinks[0].strIngredient3 + '</li></h6>' +
-                '<li><p>' + response.drinks[0].strInstructions + '</p></li>')*/
-        })
+            $('#instructions').text(instructions)
     })
+})
 }
 
 
-
-// for loop to pull random result based on response.length of ingredient array
-// response.drinks[i].idDrink
-// use that # to get 2nd array which will populate the webpage
-
-//create for loop to ignore null fields
-//nullish coalesing operator
-// stop for loop: break: if field = null (break)    
-
-// var liquorImage = $(`#${liquorType[i]}`)
-        // console.log('liquorImage:', liquorImage)
