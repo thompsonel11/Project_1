@@ -6,6 +6,11 @@
       outline: none;
     }
 
+    .spinnerHide {
+      display: none;
+    } 
+
+ 
     #spinner {
       align-self: flex-start;
     }

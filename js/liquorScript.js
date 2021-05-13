@@ -1,8 +1,5 @@
-var liquorType = ['vodka', 'whiskey', 'tequila', 'gin', 'liqueur', 'jagermeister', 'prosecco', 'rum']
 var cocktail;
 var id;
-
-
 
 var choices = document.getElementById('choices')
 var results = document.getElementById('results')
@@ -11,7 +8,7 @@ var drinkResult;
 
 $(document).on('click', '.liquor', function () {
     id = $(this).attr('id');
-    choices.classList.add('hide')
+    $("#choices").fadeOut(750)
     results.classList.remove('hide')
     APICall();
 
