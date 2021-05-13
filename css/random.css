@@ -6,27 +6,8 @@
       outline: none;
     }
 
-    body {
-      background: rgb(60,60,242);
-      background: linear-gradient(90deg, rgba(60,60,242,1) 0%, rgba(98,245,230,1) 52%, rgba(60,60,242,1) 100%);
-      background-size: cover;
-    }
-
-   .header-text, .motto-text {
-    text-align: left;
-    left: 45px;
-    color: white; 
-   }
-
-   .motto-text {
-     font-size: 25px;
-   }
-
-    .container-section {
-      display: flex;
-    
-      height: 75%;
-  
+    #spinner {
+      align-self: flex-start;
     }
      
     .mainbody{
@@ -35,8 +16,7 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      overflow: hidden;
-     
+      overflow: hidden;     
     }
     
     .mainbox{
@@ -52,7 +32,6 @@
       content: '';
       width: 32px;
       height: 32px;
-      background: url('download.png') no-repeat;
       background-size: 32px;
       right: -30px;
       top: 50%;
@@ -75,6 +54,7 @@
       display: inline-block;
       position: absolute;
     }
+
     .span1{
       clip-path: polygon(0 92%, 100% 50%, 0 8%);
       background-color: #fffb00;
@@ -140,7 +120,7 @@
       height: 75px;
       border-radius: 50%;
       border: 4px solid #fff;
-      background-color: #001aff;
+      background-color: #009688;
       color: #fff;
       box-shadow: 0 5px 20px #000;
       font-weight: bold;

@@ -1,22 +1,38 @@
-var random = document.getElementById('random')
+var random = document.getElementById('spinner')
 var results = document.getElementById('results')
 var drinkResult;
 
 $(document).on('click', '.spin', function () {
-	random.classList.add('hide')
-	results.classList.remove('hide')
+	// random.classList.add('hide')
+	// results.classList.remove('hide')
 
 })
 
 	var typeSearch = {
 		"async": true,
 		"crossDomain": true,
-		"url": `https://www.thecocktaildb.com/api/json/v1/1/random.php?i=${random}`,
+		"url": `https://www.thecocktaildb.com/api/json/v1/1/random.php?`,
 		"method": "GET",
 	}
 	
 	$.ajax(typeSearch).done(function (response) {
 		console.log(response)
+
+		var drinkName = response.drinks[0].strDrink
+		var drinkImage = response.drinks[0].strDrinkThumb
+		var instructions = response.drinks[0].strInstructions
+		$('#drinkName').text(drinkName);
+		$('#drinkImage').attr('src', drinkImage);
+		console.log(response.drinks[0])
+
+		for (var i = 1; i < 15; i++) {
+			if (response.drinks[0]['strIngredient' + i] === null) {
+				break;
+			}
+			console.log(response.drinks[0]['strIngredient' + i])
+			$('#ingredients').append('<li>' + response.drinks[0]['strMeasure' + i] + response.drinks[0]['strIngredient' + i] + '</li>')
+		}
+		$('#instructions').text(instructions)
 	})
 
 
