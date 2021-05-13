@@ -1,11 +1,11 @@
-// var spinner = document.getElementById('spinner')
-// var results = document.getElementById('results')
+
 var drinkResult;
 $("#spinner").fadeIn
 var results = document.getElementById('results')
 
 $(document).on('click', '.spin', function () {
-	$("#spinner").fadeOut(3000);
+	setTimeout
+	// $("#spinner").fadeOut(500);
     results.classList.remove('spinnerHide')
 })
 
