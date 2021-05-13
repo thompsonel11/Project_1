@@ -1,8 +1,8 @@
 // API FOR MOODS 
-var mood = ['sad', 'happy', 'relaxed', 'reckless', 'flirty', 'angry', 'lonely', 'celebrate']
+
+var mood = ['sad', 'happy', 'relaxed', 'party', 'flirty', 'angry', 'lonely', 'celebrate']
 
 for (let i = 0; i < mood.length; i++) {
-
 
     var settings = {
         "async": true,
@@ -33,5 +33,3 @@ $.ajax(settings).done(function (response) {
     console.log(response);
 });
 
-
-ß
