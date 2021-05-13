@@ -18,7 +18,7 @@
 </head>
 
 <body>
-  <nav class="black" role="navigation">
+  <nav class="teal" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="./index.html" class="brand-logo">Pour Decisions</a>
       <ul class="right hide-on-med-and-down">
@@ -35,20 +35,12 @@
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
-    <!-- 
-        uses the cocktail API to generate a random drink with ingredients
-        drink carosel? 
-        spinner/slot machine/ some fun animationy thing
-        hides animation container and shows drink container with try again button -->
-        <div class="section">
-        <div class="container" id="random">
-        <br><br>
-        <h1 class="header-text">Can't <br>Decide?</h1>
-        <p class="motto-text">Spin the wheel to generate a random cocktail.</p>        
-      </div>    
-      </div>
-        
-      <div id="mainbody" class="mainbody">
+
+
+  <div class="container" id="spinner">
+    <h3 class="header center-align black-text">Spin the wheel to generate a random cocktail:</h3>
+
+    <div id="mainbody" class="mainbody">
       <div id="mainbox" class="mainbox">
         <div id="box" class="box">
           <div class="box1">
@@ -64,31 +56,36 @@
             <span class="span4"><b>Hakuna Ma'Vodka</b></span>
           </div>
         </div>
-    
+
         <button class="spin" onclick="myfunction()">SPIN</button>
       </div>
-      </div>
-    
-       
-      <div class="container hide" id="results">
-      <img class="resultImg col m4 s12" id="drinkImage" src="" alt="cocktail">
+    </div>
+  </div>
+
+  <div class="container hide" id="results">
+    <div class="row">
+      <img class="resultImg col m4 s12" id='drinkImage' src="" alt="cocktail">
       <div class="col m1 s12"></div>
       <div class="recipe col m7 s12">
-        <h2 class="center" id="drinkName">Cocktail</h2>
+        <h2 class="center" id="drinkName"> Drink Name</h2>
         <ul class="left" id="ingredients">
-          <li>ingredients</li>
+          <h6>
+            <li> Ingredients</li>
         </ul>
-        <a class="waves-effect waves-light btn-large right" id="wineItBack" href="">Wine it Back</a>
+        </h6><br><br>
+        <p class="left" id="instructions"></p><br>
+        <a class="waves-effect waves-light btn-large right" id="tryAgain" href="">Wine it Back</a>
       </div>
     </div>
-     
-    
-<!--  Scripts-->
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="js/materialize.js"></script>
-<script src="js/init.js"></script>
-<script src="js/random.js"></script>
-<script src="js/script.js"></script>
+  </div>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/random.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 
