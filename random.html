@@ -13,11 +13,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./css/materialize.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/random.css">
   <title>Pour Decisions</title>
 </head>
 
 <body>
-  <nav class="teal" role="navigation">
+  <nav class="black" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="./index.html" class="brand-logo">Pour Decisions</a>
       <ul class="right hide-on-med-and-down">
@@ -39,26 +40,55 @@
         drink carosel? 
         spinner/slot machine/ some fun animationy thing
         hides animation container and shows drink container with try again button -->
-
-        <div class="container">
+        <div class="section">
+        <div class="container" id="random">
         <br><br>
-        <h1 class="header left-align black-text">Can't <br>Decide?</h1>
-        <p class="left-align black-text brand motto">Selfie time! Press the shutter button on the camera and a drink will be generated based off how you look!</p>
+        <h1 class="header-text">Can't <br>Decide?</h1>
+        <p class="motto-text">Spin the wheel to generate a random cocktail.</p>        
+      </div>    
+      </div>
+        
+      <div id="mainbody" class="mainbody">
+      <div id="mainbox" class="mainbox">
+        <div id="box" class="box">
+          <div class="box1">
+            <span class="span1"><b>Born to RUM</b></span>
+            <span class="span2"><b>Renewed my GIN membership</b></span>
+            <span class="span3"><b>Whiskey Business</b></span>
+            <span class="span4"><b>Sip back and relax</b></span>
+          </div>
+          <div class="box2">
+            <span class="span1"><b>Pitcher Perfect</b></span>
+            <span class="span2"><b>I work nine to wine</b></span>
+            <span class="span3"><b>High Spirits</b></span>
+            <span class="span4"><b>Hakuna Ma'Vodka</b></span>
+          </div>
+        </div>
+    
+        <button class="spin" onclick="myfunction()">SPIN</button>
+      </div>
+      </div>
+    
+       
+      <div class="container hide" id="results">
+      <img class="resultImg col m4 s12" id="drinkImage" src="" alt="cocktail">
+      <div class="col m1 s12"></div>
+      <div class="recipe col m7 s12">
+        <h2 class="center" id="drinkName">Cocktail</h2>
+        <ul class="left" id="ingredients">
+          <li>ingredients</li>
+        </ul>
+        <a class="waves-effect waves-light btn-large right" id="wineItBack" href="">Wine it Back</a>
       </div>
     </div>
-    <div class="background"><img src="./images/liquor background.webp" alt="alcohol background img 1"></div>
-  </div>
-
-  <div class="container">
-    <div class="section">
-      
      
+    
 <!--  Scripts-->
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="js/materialize.js"></script>
 <script src="js/init.js"></script>
-<script src="random.js"></script>
-<script src="./js/script.js"></script>
+<script src="js/random.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 
