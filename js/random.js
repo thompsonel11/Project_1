@@ -1,11 +1,12 @@
-var random = document.getElementById('spinner')
-var results = document.getElementById('results')
+// var spinner = document.getElementById('spinner')
+// var results = document.getElementById('results')
 var drinkResult;
+$("#spinner").fadeIn
+var results = document.getElementById('results')
 
 $(document).on('click', '.spin', function () {
-	// random.classList.add('hide')
-	// results.classList.remove('hide')
-
+	$("#spinner").fadeOut(3000);
+    results.classList.remove('spinnerHide')
 })
 
 	var typeSearch = {
