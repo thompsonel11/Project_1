@@ -50,6 +50,7 @@ function APICall() {
             $('#drinkName').text(drinkName);
             $('#drinkImage').attr('src', drinkImage);
             console.log(response.drinks[0])
+
             for (var i = 1; i < 15; i++) {
                 if (response.drinks[0]['strIngredient' + i] === null) {
                     break;
