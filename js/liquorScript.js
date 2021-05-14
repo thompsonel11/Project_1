@@ -11,7 +11,7 @@ var drinkResult;
 
 $(document).on('click', '.liquor', function () {
     id = $(this).attr('id');
-    choices.classList.add('hide')
+    $("#choices").fadeOut(500)
     results.classList.remove('hide')
     APICall();
 
