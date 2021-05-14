@@ -4,9 +4,10 @@ $("#spinner").fadeIn
 var results = document.getElementById('results')
 
 $(document).on('click', '.spin', function () {
-	setTimeout
-	$("#spinner").fadeOut(500);
+	setTimeout(function(){
+		$("#spinner").fadeOut(4000);
     results.classList.remove('spinnerHide')
+	})
 })
 
 	var typeSearch = {
