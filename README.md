@@ -1,6 +1,6 @@
 # Pour Decisions
 Pour Decisions is a an app that was made for the cocktail aficionado. With bars being closed for the better part of the past year,
-we figured an application that could recommend cocktails based of one's liquor preference, mood, or a random recommendation, is just
+we figured an application that could recommend cocktails based off one's liquor preference, mood, or a random recommendation, is just
 what was needed.
 
  You can view the live application at https://thompsonel11.github.io/Project_1/
@@ -8,16 +8,18 @@ what was needed.
 ## User Story
 As a cocktail enthusiast, I want to be presented with different cocktail recipes so that I can conveniently make a cocktail based on:
 ```bash
-~Liquor Preference
-~Mood
-~Random
+Liquor Preference
+Mood
+Random
 ```
 
 ## Contributors
+```bash
 Jocelyn Remington
 Liz Thompson
 Steven Crutchfield
 Summer Milner
+```
 
 The following are screenshots of the various pages found in our application:
 ![project 1](https://user-images.githubusercontent.com/80479850/118337193-426ccd00-b4e1-11eb-9a90-b1abfee1a60b.PNG)
