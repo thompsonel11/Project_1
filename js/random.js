@@ -3,13 +3,14 @@ var drinkResult;
 $("#spinner").fadeIn
 var results = document.getElementById('results')
 
+// Click even that fades out the spinner and displays results
 $(document).on('click', '.spin', function () {
 	setTimeout(function(){
 		$("#spinner").fadeOut(500);
     	results.classList.remove('spinnerHide')
 	},5500)
 })
-
+// This defines the alcohol API which is queried by ID 
 	var typeSearch = {
 		"async": true,
 		"crossDomain": true,
@@ -17,6 +18,7 @@ $(document).on('click', '.spin', function () {
 		"method": "GET",
 	}
 	
+    // Ajax call to randomly return the drink name, image, ingrediants, measurements and instructions are all returned 
 	$.ajax(typeSearch).done(function (response) {
 		console.log(response)
 
@@ -27,6 +29,7 @@ $(document).on('click', '.spin', function () {
 		$('#drinkImage').attr('src', drinkImage);
 		console.log(response.drinks[0])
 
+		// 15 is based on maximum amount of ingrediants and measurements as defined in the API
 		for (var i = 1; i < 15; i++) {
 			var measure = response.drinks[0]['strMeasure' +i]
 			if (response.drinks[0]['strIngredient' + i] === null) {
@@ -40,7 +43,6 @@ $(document).on('click', '.spin', function () {
 		}
 		$('#instructions').text(instructions)
 	})
-
 
 
 	//Spinner function

@@ -5,7 +5,7 @@ var choices = document.getElementById('choices')
 var results = document.getElementById('results')
 var drinkResult;
 
-
+// Click event that will hide/show results to user, and grabs the ID from html to query the API
 $(document).on('click', '.liquor', function () {
     id = $(this).attr('id');
     $("#choices").fadeOut(500)
@@ -13,9 +13,9 @@ $(document).on('click', '.liquor', function () {
     APICall();
 })
 
-
+// API Call to the cocktail database - this entire function is used on each webpage
 function APICall() {
-
+    // This defines the alcohol API which is queried by ID 
     var typeSearch = {
         "async": true,
         "crossDomain": true,
@@ -23,7 +23,7 @@ function APICall() {
         "method": "GET",
     }
 
-
+// A randmon ID is generated and an ajax call is made
     $.ajax(typeSearch).done(function (response) {
         console.log(response);
         var randomDrink = Math.floor(Math.random() * response.drinks.length);
@@ -36,7 +36,7 @@ function APICall() {
             "method": "GET",
         }
 
-
+// Where the drink name, image, ingrediants, measurements and instructions are all returned 
     }).then(function () {
         $.ajax(cocktail).done(function (response) {
             console.log(response);
@@ -46,7 +46,7 @@ function APICall() {
             $('#drinkName').text(drinkName);
             $('#drinkImage').attr('src', drinkImage);
             console.log(response.drinks[0])
-
+            // 15 is based on maximum amount of ingrediants and measurements as defined in the API
             for (var i = 1; i < 15; i++) {
                 var measure = response.drinks[0]['strMeasure' +i]
                 if (response.drinks[0]['strIngredient' + i] === null) {
