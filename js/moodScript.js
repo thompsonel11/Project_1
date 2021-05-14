@@ -66,11 +66,15 @@ $(document).on('click', '.moodGIF', function () {
                 console.log(response.drinks[0])
     
                 for (var i = 1; i < 15; i++) {
+                    var measure = response.drinks[0]['strMeasure' +i]
                     if (response.drinks[0]['strIngredient' + i] === null) {
                         break;
-                    }
+                    } 
+                    if (measure === null) {
+                        measure = ''
+                    } 
                     console.log(response.drinks[0]['strIngredient' + i])
-                    $('#ingredients').append('<li>' + response.drinks[0]['strMeasure' + i] + response.drinks[0]['strIngredient' + i] + '</li>')
+                    $('#ingredients').append('<li>' + measure + " " + response.drinks[0]['strIngredient' + i] + '</li>')
                 }
                 $('#instructions').text(instructions)
         })
