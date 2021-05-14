@@ -25,18 +25,17 @@
     }
     
     .mainbox{
-      position: absolute;
+      position: relative;
       width: 500px;
-      height: 500px;
-      right: 400px;
-      bottom: 30px;
+      height: 500px;     
     }
 
     .mainbox:after{
-      position: absolute;
+      position: relative;
       content: '';
       width: 32px;
       height: 32px;
+      background-image: url('../images/arrow-left.png') no-repeat;
       background-size: 32px;
       right: -30px;
       top: 50%;
