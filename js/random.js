@@ -5,7 +5,7 @@ var results = document.getElementById('results')
 
 $(document).on('click', '.spin', function () {
 	setTimeout(function(){
-		$("#spinner").fadeOut(4000);
+		$("#spinner").easeOut(4000);
     results.classList.remove('spinnerHide')
 	})
 })
