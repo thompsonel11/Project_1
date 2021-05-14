@@ -34,7 +34,7 @@
     </div>
   </nav>
 
-  <div  id="choices">
+  <div id="choices">
     <h3 class="header center-align black-text">How are you feeling?</h3>
 
     <!-- BEGIN CREATING CARDS FOR EACH MOOD -->
@@ -42,19 +42,27 @@
     <div class="row center-align">
 
       <div class="col l3 m6 s12 image">
+        <a href="#">
         <img class="moodGIF" id="sad" data-drink="whiskey" src="">
+        </a>
       </div>
 
       <div class="col l3 m6 s12 image">
-        <img class="moodGIF" id="happy" data-drink="kahlua" src="">
+        <a href="#">
+          <img class="moodGIF" id="happy" data-drink="kahlua" src="">
+        </a>
       </div>
 
       <div class="col l3 m6 s12 image">
-        <img class="moodGIF" id="relaxed" data-drink="rum" src="">
+        <a href="#">
+          <img class="moodGIF" id="relaxed" data-drink="rum" src="">
+        </a>
       </div>
 
       <div class="col l3 m6 s12 image">
-        <img class="moodGIF" id="party" data-drink="tequila"  src="">
+        <a href="#">
+        <img class="moodGIF" id="party" data-drink="tequila" src="">
+        </a>
       </div>
 
     </div>
@@ -62,19 +70,27 @@
     <div class="row center-align">
 
       <div class="col l3 m6 s12 image">
+        <a href="#">
         <img class="moodGIF" id="flirty" data-drink="vodka" src="">
+        </a>
       </div>
 
       <div class="col l3 m6 s12 image">
+        <a href="#">
         <img class="moodGIF" id="angry" data-drink="jagermeister" src="">
+        </a>
       </div>
 
       <div class="col l3 m6 s12 image">
+        <a href="#">
         <img class="moodGIF" id="lonely" data-drink="gin" src="">
+        </a>
       </div>
 
       <div class="col l3 m6 s12 image">
+        <a href="#">
         <img class="moodGIF" id="celebrate" data-drink="prosecco" src="">
+        </a>
       </div>
 
     </div>
@@ -82,20 +98,22 @@
   </div>
   <!-- RESULTS FROM API SEARCH -->
 
- <div class="container hide" id="results">
+  <div class="container hide" id="results">
     <div class="row">
       <img class="resultImg col m4 s12" id='drinkImage' src="" alt="cocktail">
       <div class="col m1 s12"></div>
       <div class="recipe col m7 s12">
         <h2 class="center" id="drinkName"> Drink Name</h2>
-        <ul class="left" id="ingredients"><h6>
-          <li> Ingredients</li>
-        </ul></h6><br>
+        <ul class="left" id="ingredients">
+          <h6>
+            <li> Ingredients</li>
+        </ul>
+        </h6><br>
         <p class="left" id="instructions"></p><br>
         <a class="waves-effect waves-light btn-large right" id="tryAgain" href="">Try Again</a>
       </div>
     </div>
-  
+
   </div>
 
   <!--  Scripts-->

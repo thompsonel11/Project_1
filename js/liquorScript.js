@@ -11,7 +11,6 @@ $(document).on('click', '.liquor', function () {
     $("#choices").fadeOut(500)
     results.classList.remove('hide')
     APICall();
-
 })
 
 
