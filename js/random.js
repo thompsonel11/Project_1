@@ -7,7 +7,7 @@ $(document).on('click', '.spin', function () {
 	setTimeout(function(){
 		$("#spinner").fadeOut(500);
     	results.classList.remove('spinnerHide')
-	},5000)
+	},5500)
 })
 
 	var typeSearch = {
@@ -58,5 +58,5 @@ $(document).on('click', '.spin', function () {
 		element.classList.remove('animate');
 		setTimeout(function(){
 			element.classList.add('animate');
-		}, 5000); //5000 = 5 second
+		}, 6000); //5000 = 5 second
 	}
