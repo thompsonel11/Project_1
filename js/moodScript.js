@@ -1,5 +1,5 @@
 // API FOR MOODS 
-
+//Listing out the diffrent moods the user will pick from in an array. These are arranged in the same order as on the mood.html file.
 var mood = ['sad', 'happy', 'relaxed', 'party', 'flirty', 'angry', 'lonely', 'celebrate']
 
 for (let i = 0; i < mood.length; i++) {
@@ -20,16 +20,61 @@ for (let i = 0; i < mood.length; i++) {
         moodImg.attr('src', response.data[randomGifNumber].images.original.url)
     });
 }
-// API FOR LIQUOR TYPE
-var liquorType = ['vodka', 'whiskey', 'tequila', 'gin', 'liqueur', 'jagermeister', 'prosecco', 'rum']
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${liquorType}`,
-    "method": "GET",
-}
 
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
+var id;
+var choices = document.getElementById('choices')
+var results = document.getElementById('results')
 
+$(document).on('click', '.moodGIF', function () {
+    id = $(this).attr('data-drink');
+    choices.classList.add('hide')
+    results.classList.remove('hide')
+    APICall();
+
+
+    function APICall() {
+
+        var typeSearch = {
+            "async": true,
+            "crossDomain": true,
+            "url": `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${id}`,
+            "method": "GET",
+        }
+    
+    
+        $.ajax(typeSearch).done(function (response) {
+            console.log(response);
+            var randomDrink = Math.floor(Math.random() * response.drinks.length);
+            drinkID = response.drinks[randomDrink].idDrink
+            console.log('drinkID:', drinkID)
+            cocktail = {
+                "async": true,
+                "crossDomain": true,
+                "url": `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkID}`,
+                "method": "GET",
+            }
+    
+    
+        }).then(function () {
+            $.ajax(cocktail).done(function (response) {
+                console.log(response);
+                var drinkName = response.drinks[0].strDrink
+                var drinkImage = response.drinks[0].strDrinkThumb
+                var instructions = response.drinks[0].strInstructions
+                $('#drinkName').text(drinkName);
+                $('#drinkImage').attr('src', drinkImage);
+                console.log(response.drinks[0])
+    
+                for (var i = 1; i < 15; i++) {
+                    if (response.drinks[0]['strIngredient' + i] === null) {
+                        break;
+                    }
+                    console.log(response.drinks[0]['strIngredient' + i])
+                    $('#ingredients').append('<li>' + response.drinks[0]['strMeasure' + i] + response.drinks[0]['strIngredient' + i] + '</li>')
+                }
+                $('#instructions').text(instructions)
+        })
+    })
+    }
+    
+})
