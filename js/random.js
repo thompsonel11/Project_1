@@ -5,9 +5,9 @@ var results = document.getElementById('results')
 
 $(document).on('click', '.spin', function () {
 	setTimeout(function(){
-		$("#spinner").fadeOut(4500);
-    results.classList.remove('spinnerHide')
-	})
+		$("#spinner").fadeOut(500);
+    	results.classList.remove('spinnerHide')
+	},5000)
 })
 
 	var typeSearch = {
